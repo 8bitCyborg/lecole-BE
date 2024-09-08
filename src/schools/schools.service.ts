@@ -30,4 +30,13 @@ export class SchoolsService {
       });
     };
   };
+
+  async findSchool(identifier: string){
+    try {
+      const school = await this.schoolsRepository.findOneBy({ email: identifier });
+      return school;
+    } catch (error) {
+      console.log(error);
+    };
+  };
 };

@@ -11,6 +11,7 @@ import { School } from './entities/school.entity';
     ]),
   ],
   providers: [SchoolsService],
-  controllers: [SchoolsController]
+  controllers: [SchoolsController],
+  exports: [SchoolsService],
 })
 export class SchoolsModule {}
